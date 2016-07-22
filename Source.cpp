@@ -4,7 +4,7 @@
 int main(int argc, char** argv)
 {
 	VideoCapture cap(0); //capture the video from webcam
-
+	VideoCapture cap2(2);
 	if (!cap.isOpened())  // if not success, exit program
 	{
 		cout << "Cannot open the web cam" << endl;
@@ -81,6 +81,12 @@ Red 160-179
 	NewBody.JointArray[1] = Joint();
 	NewBody.JointArray[2] = Joint();
 	//NewBody.JointArray[0] = joint1;
+	JointLink sampleLink;
+	JointLink sampleLink2;
+
+	//Make connections
+	sampleLink.ConnectJoints(&NewBody.JointArray[0], &NewBody.JointArray[2]);
+	sampleLink.ConnectJoints(&NewBody.JointArray[2], &NewBody.JointArray[1]);
 
 	//init joints
 
@@ -105,8 +111,10 @@ Red 160-179
 	while (true)
 	{
 		Mat imgOriginal;
+		Mat imgOriginal2;
 		Mat SkeletonDrawn = Mat::zeros(imgTmp.size(), CV_8UC3);  //Reset the value of the joints for every frame
 		bool bSuccess = cap.read(imgOriginal); // read a new frame from video
+		cap2.read(imgOriginal2); // read a new frame from video
 
 
 
@@ -182,12 +190,14 @@ Red 160-179
 		*/
 
 		//imshow("Thresholded Image", imgThresholded); //show the thresholded image
-
+		sampleLink.DrawLink(SkeletonDrawn);
 		imgOriginal = imgOriginal + imgLines;
+		imgOriginal = imgOriginal + SkeletonDrawn;
 		imshow("Original", imgOriginal); //show the original image
+		imshow("Original2", imgOriginal2); //show the original image
 
 		if (waitKey(30) == 27) //wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop
-		{
+		{ 
 			cout << "esc key is pressed by user" << endl;
 			break;
 		}

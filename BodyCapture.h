@@ -105,3 +105,21 @@ public:
 	~BodyCapture();
 };
 
+
+
+class StereoDepth
+{
+
+private:
+	int MaxBodyJointStored;
+
+public:
+	StereoDepth();
+	//void GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg );
+	Mat DepthMap;
+	float mainDepth;
+	void setMainDepth(float B);
+
+};
+
+Mat GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg);

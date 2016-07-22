@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="BodyCapture.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StereoDepth.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BodyCapture.h" />
