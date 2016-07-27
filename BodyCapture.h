@@ -117,6 +117,7 @@ public:
 	~BodyCapture();
 };
 
+<<<<<<< HEAD
 
 
 class StereoDepth
@@ -136,3 +137,5 @@ public:
 
 //Mat GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg);
 StereoBM* GenerateDepthMap(Mat leftimg, Mat rightimg, int numDisparities=16, int blockSize=2);
+=======
+>>>>>>> parent of d1bd961... Added Stereo  Vision

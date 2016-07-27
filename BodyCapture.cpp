@@ -59,10 +59,10 @@ void Joint::SetJointType(int theType) {
 		cout << "Invalid Joint ID: "<< theType << ". Choose a number between 0-14. " << endl;
 }
 
-	/// <param> HSVImage an image already converted into the HSV color space
-	/// </param>
-	/// <summary> Filter the image acording to a high/low range.
-	/// </summary>
+/// <param> HSVImage an image already converted into the HSV color space
+/// </param>
+/// <summary> Filter the image
+/// </summary>
 void Joint::CreateFilteredImage(Mat HSVImage, bool display) {
 	//cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV);
 	inRange(HSVImage, Scalar(iLowH, iLowS, iLowV), Scalar(iHighH, iHighS, iHighV), theFilteredImage);
@@ -200,6 +200,4 @@ void JointLink::DrawLink(Mat imgLine) {
 void BodyCapture::setMainDepth(float B) {
 	mainDepth = B;
 }
-
-
 
