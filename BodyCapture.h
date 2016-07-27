@@ -1,8 +1,20 @@
 #pragma once
 
 #include <iostream>
+#include "disparity_filters.h"
 #include <F:\opencv\MyBuild\install\include\opencv2\opencv.hpp>
 #include <F:\opencv\MyBuild\install\include\opencv\highgui.h>
+
+
+#include "F:\opencv\MyBuild\install\include\opencv2\calib3d.hpp"
+#include "F:\opencv\MyBuild\install\include\opencv2\imgproc.hpp"
+#include "F:\opencv\MyBuild\install\include\opencv2\imgcodecs.hpp"
+#include "F:\opencv\MyBuild\install\include\opencv2\core\utility.hpp"
+//#include "F:\opencv\MyBuild\install\include\opencv2\ximgproc.hpp"
+//#include "opencv2/ximgproc/disparity_filter.hpp"
+
+
+
 using namespace cv;
 using namespace std;
 
@@ -122,4 +134,5 @@ public:
 
 };
 
-Mat GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg);
+//Mat GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg);
+StereoBM* GenerateDepthMap(Mat leftimg, Mat rightimg, int numDisparities=16, int blockSize=2);
