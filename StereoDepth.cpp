@@ -1,6 +1,4 @@
 #include "BodyCapture.h"
-#include "disparity_filters.h"
-#include "edge_filter.h"
 
 StereoBM* GenerateDepthMap(Mat leftimg, Mat rightimg, int numDisparities, int blockSize) {
 

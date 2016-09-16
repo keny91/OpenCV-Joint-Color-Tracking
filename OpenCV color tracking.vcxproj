@@ -74,18 +74,23 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\opencv3\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>F:\opencv3\build\install\x86\vc14\staticlib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core310d.lib;opencv_highgui310d.lib;opencv_imgproc310d.lib;opencv_imgcodecs310d.lib;opencv_videoio310d.lib;opencv_video310d.lib;opencv_calib3d310d.lib;opencv_videostab310d.lib;opencv_ts310d.lib;opencv_features2d310d.lib;opencv_superres310d.lib;opencv_flann310d.lib;opencv_ml310d.lib;opencv_objdetect310d.lib;opencv_photo310d.lib;opencv_shape310d.lib;opencv_stitching310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\opencv\MyBuild\install\include;F:\opencv\MyBuild\install\x64\vc14\bin</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\opencv3\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>F:\opencv\MyBuild\install\x64\vc14\lib;F:\opencv\MyBuild\install\x64\vc14\bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core310d.lib;opencv_highgui310d.lib;opencv_imgproc310d.lib;opencv_imgcodecs310d.lib;opencv_videoio310d.lib;opencv_video310d.lib;opencv_calib3d310d.lib;opencv_videostab310d.lib;opencv_ts310d.lib;opencv_features2d310d.lib;opencv_superres310d.lib;opencv_flann310d.lib;opencv_ml310d.lib;opencv_objdetect310d.lib;opencv_photo310d.lib;opencv_shape310d.lib;opencv_stitching310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\opencv3\build\install\x64\vc14\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core310d.lib;opencv_highgui310d.lib;opencv_imgproc310d.lib;opencv_imgcodecs310d.lib;opencv_videoio310d.lib;opencv_video310d.lib;opencv_calib3d310d.lib;opencv_videostab310d.lib;opencv_ts310d.lib;opencv_features2d310d.lib;opencv_superres310d.lib;opencv_flann310d.lib;opencv_ml310d.lib;opencv_objdetect310d.lib;opencv_photo310d.lib;opencv_shape310d.lib;opencv_stitching310d.lib;opencv_bgsegm310d.lib;opencv_stereo310d.lib;opencv_xfeatures2d310d.lib;opencv_ximgproc310d.lib;opencv_face310d.lib;opencv_fuzzy310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -95,10 +100,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\opencv3\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>F:\opencv3\build\install\x86\vc14\staticlib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core310d.lib;opencv_highgui310d.lib;opencv_imgproc310d.lib;opencv_imgcodecs310d.lib;opencv_videoio310d.lib;opencv_video310d.lib;opencv_calib3d310d.lib;opencv_videostab310d.lib;opencv_ts310d.lib;opencv_features2d310d.lib;opencv_superres310d.lib;opencv_flann310d.lib;opencv_ml310d.lib;opencv_objdetect310d.lib;opencv_photo310d.lib;opencv_shape310d.lib;opencv_stitching310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -108,18 +116,19 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\opencv\MyBuild\install\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\opencv3\build\install\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>F:\opencv\MyBuild\install\x64\vc14\lib;F:\opencv\MyBuild\install\x64\vc14\bin</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\opencv3\build\install\x64\vc14\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_core310.lib;opencv_highgui310.lib;opencv_imgcodecs310.lib;opencv_videoio310.lib;opencv_imgproc310.lib;opencv_video310.lib;opencv_calib3d310.lib;opencv_features2d310.lib;opencv_flann310.lib;opencv_ml310.lib;opencv_objdetect310.lib;opencv_photo310.lib;opencv_shape310.lib;opencv_stitching310.lib;opencv_superres310.lib;opencv_ts310.lib;opencv_videostab310.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BodyCapture.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StereoDepth.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BodyCapture.h" />

@@ -1,18 +1,15 @@
 #pragma once
 
 #include <iostream>
-#include "disparity_filters.h"
-#include <F:\opencv\MyBuild\install\include\opencv2\opencv.hpp>
-#include <F:\opencv\MyBuild\install\include\opencv\highgui.h>
+#include <stdio.h>
+#include <string.h>
 
 
-#include "F:\opencv\MyBuild\install\include\opencv2\calib3d.hpp"
-#include "F:\opencv\MyBuild\install\include\opencv2\imgproc.hpp"
-#include "F:\opencv\MyBuild\install\include\opencv2\imgcodecs.hpp"
-#include "F:\opencv\MyBuild\install\include\opencv2\core\utility.hpp"
-//#include "F:\opencv\MyBuild\install\include\opencv2\ximgproc.hpp"
-//#include "opencv2/ximgproc/disparity_filter.hpp"
-
+#include ".\opencv2\calib3d.hpp"
+#include ".\opencv2\core\core.hpp"
+#include <.\opencv2\highgui\highgui.hpp>
+#include ".\opencv2\imgproc\imgproc.hpp"
+#include ".\opencv2\imgproc.hpp"
 
 
 using namespace cv;
@@ -76,7 +73,7 @@ public:
 	void SetSaturation(int minH, int maxH);
 	void SetJointType(int type);
 	bool Detected;
-	void CreateFilteredImage(Mat HSVImage, bool display);
+	void CreateFilteredImage(Mat HSVImage, bool display = false);
 	void UpdatePoint2DUsingMoments(Mat imgline, bool draw);
 	void DrawJointLine(Mat imgline);
 };
@@ -117,8 +114,6 @@ public:
 	~BodyCapture();
 };
 
-<<<<<<< HEAD
-
 
 class StereoDepth
 {
@@ -135,7 +130,4 @@ public:
 
 };
 
-//Mat GenerateDepthMap(Mat LeftSidedImg, Mat RightSidedImg);
-StereoBM* GenerateDepthMap(Mat leftimg, Mat rightimg, int numDisparities=16, int blockSize=2);
-=======
->>>>>>> parent of d1bd961... Added Stereo  Vision
+

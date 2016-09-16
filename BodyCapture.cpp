@@ -117,10 +117,11 @@ void Joint::CreateFilteredImage(Mat HSVImage, bool display) {
 	if (display) {
 		char str[10];
 		char str2[100];
-		strcpy_s(str2, "largest Contour Joint");
-		_itoa_s(type, str,100,10);
-		strcat_s(str2, str);
-		imshow(str2, dst);
+		char*temp = "largest Contour Joint";
+		//strcpy_s(str2, temp);
+		//_itoa_s(type, str,100,10);
+		//strcat_s(str2, str);
+		imshow(temp, dst);
 	}
 
 
