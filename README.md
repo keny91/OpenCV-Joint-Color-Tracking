@@ -2,10 +2,6 @@
 
 This is a project is meant to be a parallel project to [Kinect-Rehab-Experiment](https://github.com/keny91/Kinect-Rehab-Experiment), using OpenCV instead of NiTE2. 
 
-Creating a parallel project to 
-
-
-see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Color Band Recognition
 
